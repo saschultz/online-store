@@ -12,8 +12,8 @@ import { AlbumService } from '../album.service';
 })
 
 export class AlbumDetailComponent implements OnInit {
-  albumId: number = null;
-  albumToDisplay: Album;
+  albumId: string;
+  albumToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private albumService: AlbumService) { }
 
