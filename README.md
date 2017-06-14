@@ -2,6 +2,24 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
+## Cloning this project
+* npm install
+* bower init
+* npm uninstall --save-dev angular-cli
+* npm install --save-dev @angular/cli@latest
+* npm install   @angular/{common,compiler,compiler-cli,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router,animations}@latest typescript@latest --save
+* bower install bootstrap --save
+* apm install atom-typescript
+* create API key
+
+for errors regarding spec files "cannot find 'it', 'expect', 'describe', 'beforeEach'"
+* npm install --save-dev @types/jasmine
+* import {} from 'jasmine'; at top of every spec file
+
+for error ZoneAwareError in console after successful compile
+* Check all components are imported into app.module.ts
+
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 

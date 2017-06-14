@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Album } from './album.model';
-import { ALBUMS } from './mock-album';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
 //Using @Injectable instead of @Service makes class available to our Injector
 @Injectable()
 export class AlbumService {
-
   albums: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
@@ -22,7 +20,7 @@ export class AlbumService {
     this.albums.push(newAlbum);
   }
 
-  getAlbumById(albumId: number) {
+  getAlbumById(albumId: string) {
     return this.database.object('albums/' + albumId);
   }
 
